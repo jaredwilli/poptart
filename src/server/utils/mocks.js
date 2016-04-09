@@ -6,13 +6,13 @@ var m = {};
 
 /* People */
 m.people = {
-    total: 7,
+    total: 8,
     results: [{
         id: 1,
-        firstName: 'John',
-        lastName: 'Papa',
-        age: 25,
-        location: 'Florida'
+        firstName: 'Jared',
+        lastName: 'Williams',
+        age: 33,
+        location: 'Massachusetts'
     }, {
         id: 2,
         firstName: 'Ward',
