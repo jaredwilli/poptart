@@ -8,7 +8,9 @@
                         <div ht-widget-header title="{{ vm.uploader.title }}" allow-collapse="false"></div>
 
                         <div class="widget-content">
-                            <div class="drop-box" ngf-drop ngf-select
+                            <div class="drop-box"
+                                ngf-drop
+                                ngf-select
                                 ng-model="vm.files"
                                 ngf-drag-over-class="'dragover'"
                                 ngf-multiple="vm.allowMultiple"
@@ -17,11 +19,13 @@
                                 ngf-max-size="vm.maxFileSize"
                                 accept="vm.allowedFileTypes"
                                 ngf-pattern="vm.allowedFileTypes">
-                                Drop File Here Or Click To Select
+                                Drop File Here or Click To Select
                             </div>
 
                             <div class="file-not-supported" ngf-no-file-drop>
-                                <button ngf-drop ngf-select ng-model="vm.files"
+                                <button ngf-drop
+                                    ngf-select
+                                    ng-model="vm.files"
                                     ngf-drag-over-class="'dragover'"
                                     ngf-multiple="vm.allowMultiple"
                                     ngf-allow-dir="vm.allowDirectory"
@@ -33,16 +37,6 @@
                                 </button>
                             </div>
                         </div>
-
-                        <div class="widget-foot">
-                            <div class="btn-group right">
-                                <button class="btn btn-primary btn-sm" type="submit"
-                                    ng-click="vm.upload(vm.files)">
-                                    Upload
-                                </button>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
                     </div>
                 </div>
 
@@ -50,32 +44,15 @@
                     <div class="widget worange">
                         <div ht-widget-header title="Files" allow-collapse="true"></div>
 
-                        <div class="widget-content" style="display: {{ (vm.matches.length !== null && vm.files.length > 0) ? 'block' : 'none' }}">
-                            <strong ng-if="vm.files.length !== 0">
-                                Selected files to upload
-                            </strong>
-
-                            <ul class="file-list">
-                                <li ng-repeat="file in vm.files">
-                                    {{ file.name }} {{ file.$errorParam }}
-                                    <!-- <span class="progress" ng-show="f.progress >= 0">
-                                        <div style="width: {{ f.progress }}%"
-                                            ng-bind="f.progress + '%'">
-                                        </div>
-                                    </span> -->
-                                </li>
-                            </ul>
-
-                            <div class="error" ng-if="vm.errorMsg">
-                                {{ vm.errorMsg }}
-
-                                <ul class="file-list">
-                                    <li ng-repeat="f in vm.errorFiles" style="font: small">
-                                        {{ f.name }} {{ f.$error }} {{ f.$errorParam }}
-                                    </li>
-                                </ul>
+                        <div class="widget-content" style="display: {{ (vm.files.length > 0) ? 'block' : 'none' }}">
+                            <div class="preview" ng-show="vm.files.length">
+                                <div ng-repeat="file in vm.files">
+                                    <span>{{ file.name }}</span>
+                                    <img ngf-src="!file.$error && file" />
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

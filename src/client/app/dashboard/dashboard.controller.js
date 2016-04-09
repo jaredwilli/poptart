@@ -6,12 +6,12 @@
         .controller('DashboardController', DashboardController);
 
     DashboardController.$inject = [
-        '$q', 'Upload', 'dataservice', 'logger'
+        '$q', '$scope', 'Upload', 'dataservice', 'logger'
     ];
 
     /* @ngInject */
     function DashboardController(
-        $q, Upload, dataservice, logger
+        $q, $scope, Upload, dataservice, logger
     ) {
 
         var vm = this;
@@ -33,12 +33,18 @@
         vm.allowMultiple = true;
         vm.allowDirectory = true;
         vm.keepFiles = false;
-        vm.maxFileSize = '10MB';
-        vm.allowedFileTypes = '*';
+        vm.maxFileSize = '20MB';
+        vm.allowedFileTypes = 'image/*';
         vm.url = '/upload';
 
         vm.uploadFiles = uploadFiles;
         vm.upload = upload;
+
+        $scope.$watch(function() {
+            return vm.files;
+        }, function(files) {
+            vm.upload(files);
+        });
 
         activate();
 
@@ -58,7 +64,7 @@
 
         function getPeople() {
             return dataservice.getPeople().then(function(data) {
-                vm.people = data;
+                vm.people = data.results;
                 return vm.people;
             });
         }
@@ -68,13 +74,9 @@
             vm.errorFiles = errorFiles;
 
             if (files && files.length) {
-
                 var dataObj = {
                     total: files.length,
-                    files: files,
-                    policy: vm.policies.filter(function(i) {
-                        return i.id === vm.selectedPolicy;
-                    })[0].value
+                    files: files
                 };
 
                 vm.uploadFiles(dataObj);
@@ -90,12 +92,9 @@
                 console.log('## RESPONSE');
                 console.log(resp);
 
-                vm.matches = resp.data;
-                console.log(vm.matches);
-            }, null, function() {
-                console.log('Processing...');
+            }, null, function(process) {
+                console.log('Processing...', process);
             });
         }
     }
-
 })();
