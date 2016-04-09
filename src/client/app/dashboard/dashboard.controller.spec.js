@@ -1,16 +1,19 @@
 /* jshint -W117, -W030 */
 describe('DashboardController', function() {
-    var controller;
+    var controller, scope;
     var people = mockData.getMockPeople();
 
     beforeEach(function() {
         bard.appModule('app.dashboard');
         bard.inject('$controller', '$log', '$q', '$rootScope', 'dataservice');
+        scope = $rootScope.$new();
     });
 
     beforeEach(function() {
         sinon.stub(dataservice, 'getPeople').returns($q.when(people));
-        controller = $controller('DashboardController');
+        controller = $controller('DashboardController', {
+            $scope: scope
+        });
         $rootScope.$apply();
     });
 

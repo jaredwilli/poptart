@@ -3,6 +3,7 @@
  */
 
 /*Colors*/
+@color_000: #000;
 @color_111: #111;
 @color_222: #222;
 @color_333: #333;
@@ -13,14 +14,13 @@
 @color_777: #777;
 @color_888: #888;
 @color_999: #999;
-@color_000: #000;
+@color_CCC: #CCC;
 @color_DDD: #DDD;
 @color_EEE: #EEE;
 @color_AAA: #AAA;
-@color_CCC: #CCC;
 @color_FFF: #FFF;
 @color_lightgray: #F8F8F8;
-@color_mediumgray: #CCC;
+
 @color_lightblue: #52b9e9;
 @color_lightblue_hover: #459fc9;
 @color_blue: #1171a3;
@@ -85,19 +85,19 @@ alpha(@color);           // returns the 'alpha' channel of @color
 }
 .border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
     -webkit-border-bottom-right-radius: @bottomright;
-    -webkit-border-bottom-left-radius: @bottomleft;
-    -webkit-border-top-right-radius: @topright;
-    -webkit-border-top-left-radius: @topleft;
+     -webkit-border-bottom-left-radius: @bottomleft;
+       -webkit-border-top-right-radius: @topright;
+        -webkit-border-top-left-radius: @topleft;
 
     -moz-border-radius-bottomright: @bottomright;
-    -moz-border-radius-bottomleft: @bottomleft;
-    -moz-border-radius-topright: @topright;
-    -moz-border-radius-topleft: @topleft;
+     -moz-border-radius-bottomleft: @bottomleft;
+       -moz-border-radius-topright: @topright;
+        -moz-border-radius-topleft: @topleft;
 
     border-bottom-right-radius: @bottomright;
-    border-bottom-left-radius: @bottomleft;
-    border-top-right-radius: @topright;
-    border-top-left-radius: @topleft;
+     border-bottom-left-radius: @bottomleft;
+       border-top-right-radius: @topright;
+        border-top-left-radius: @topleft;
 
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
@@ -134,9 +134,8 @@ alpha(@color);           // returns the 'alpha' channel of @color
        -moz-transition: @transition;
         -ms-transition: @transition;
          -o-transition: @transition;
-            transition: @transition;
 }
-.transform(@string){
+.transform (@string){
     -webkit-transform: @string;
        -moz-transform: @string;
         -ms-transform: @string;
@@ -146,7 +145,7 @@ alpha(@color);           // returns the 'alpha' channel of @color
 .scale (@factor) {
     -webkit-transform: scale(@factor);
        -moz-transform: scale(@factor);
-       -ms-transform: scale(@factor);
+        -ms-transform: scale(@factor);
          -o-transform: scale(@factor);
 }
 .rotate (@deg) {
@@ -185,10 +184,17 @@ alpha(@color);           // returns the 'alpha' channel of @color
         -ms-transform-origin: @x @y;
          -o-transform-origin: @x @y;
 }
-.transition(@value) {
-    -webkit-transition: @value;
-       -moz-transition: @value;
-         -o-transition: @value;
-            transition: @value;
+.backface-visibility (@value) {
+    -webkit-backface-visibility: @value;
+       -moz-backface-visibility: @value;
+        -ms-backface-visibility: @value;
+         -o-backface-visibility: @value;
+            backface-visibility: @value;
 }
-
+.min-width (@value) {
+    -webkit-min-width: @value;
+       -moz-min-width: @value;
+        -ms-min-width: @value;
+         -o-min-width: @value;
+            min-width: @value;
+}

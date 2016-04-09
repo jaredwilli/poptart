@@ -6,7 +6,6 @@
         .filter('removeunderscore', removeunderscore)
         .filter('capitalize', capitalize);
 
-
     /* @ngInject */
     function removeunderscore() {
         return function(string) {
