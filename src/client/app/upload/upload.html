@@ -1,0 +1,71 @@
+<section id="upload-view" class="mainbar">
+    <section class="matter">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="widget worange">
+                        <div ht-widget-header title="{{ vm.uploader.title }}" allow-collapse="false"></div>
+
+                        <div class="widget-content">
+                            <div class="drop-box"
+                                ngf-drop
+                                ngf-select
+                                ng-model="vm.files"
+                                ngf-drag-over-class="'dragover'"
+                                ngf-multiple="vm.allowMultiple"
+                                ngf-allow-dir="vm.allowDirectory"
+                                ngf-keep="vm.keepFiles"
+                                ngf-max-size="vm.maxFileSize"
+                                accept="vm.allowedFileTypes"
+                                ngf-pattern="vm.allowedFileTypes">
+                                Drop File Here or Click To Select
+                            </div>
+
+                            <div class="file-not-supported" ngf-no-file-drop>
+                                <button ngf-drop
+                                    ngf-select
+                                    ng-model="vm.files"
+                                    ngf-drag-over-class="'dragover'"
+                                    ngf-multiple="vm.allowMultiple"
+                                    ngf-allow-dir="vm.allowDirectory"
+                                    ngf-keep="vm.keepFiles"
+                                    ngf-max-size="vm.maxFileSize"
+                                    accept="vm.allowedFileTypes"
+                                    ngf-pattern="vm.allowedFileTypes">
+                                    Select Files
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="widget-foot">
+                            <span class="progress" ng-show="vm.progress >= 0">
+                                <div style="width: {{ vm.progress }}%"
+                                    ng-bind="vm.progress + '%'">
+                                </div>
+                            </span>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="widget worange">
+                        <div ht-widget-header title="Files" allow-collapse="true"></div>
+
+                        <div class="widget-content" style="display: {{ (vm.files.length > 0) ? 'block' : 'none' }}">
+                            <div class="preview" ng-show="vm.files.length">
+                                <span ng-repeat="file in vm.files">
+                                    <img class="thumbnail" ngf-src="!file.$error && file" />
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</section>

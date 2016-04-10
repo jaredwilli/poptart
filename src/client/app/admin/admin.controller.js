@@ -5,11 +5,10 @@
         .module('app.admin')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['logger'];
+    AdminController.$inject = ['$scope', 'logger'];
 
     /* @ngInject */
-    function AdminController(logger) {
-
+    function AdminController($scope, logger) {
         var vm = this;
         vm.title = 'Admin';
 

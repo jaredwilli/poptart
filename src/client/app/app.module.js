@@ -7,6 +7,7 @@
         'app.admin',
         'app.dashboard',
         'app.components',
+        'app.upload',
         'app.layout'
     ]);
 })();
