@@ -38,8 +38,11 @@
 .preview img,
 .preview audio,
 .preview video {
-    max-width: 300px;
-    max-height: 150px;
+    max-width: 168px;
+}
+
+.preview .thumbnail {
+    display: inline-block;
 }
 
 form .progress {
@@ -47,26 +50,13 @@ form .progress {
 }
 
 .progress {
-    border: 3px groove @color_CCC;
+    border: 1px groove darken(@color_warning, 10%);;
     display: inline-block;
     width: 100px;
 }
+
 .progress div {
     background: @color_warning;
     font-size: smaller;
     width: 0;
-}
-
-.response {
-    list-style: none;
-    padding: 0;
-    padding-top: 10px;
-    margin: 3px 0;
-    clear: both;
-}
-
-.response .sel-file li,
-.response .reqh {
-    color: @color_blue;
-    padding-bottom: 5px;
 }

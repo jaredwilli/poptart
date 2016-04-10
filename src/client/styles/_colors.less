@@ -1,7 +1,19 @@
 @import '__config.less';
 
 /**
- * Colors
+ * Colors:
+ *
+ * color_000 - color_999
+ * color_CCC - color_FFF
+ * color_lightblue
+ * color_blue
+ * color_success
+ * color_warning
+ * color_important
+ * color_violet
+ * color_lime
+ * color_hotpink
+ *
  */
 
 /* Button colors */
@@ -10,7 +22,7 @@
     background: @color_blue !important;
 
     &:hover {
-        background: @color_blue_hover !important;
+        background: darken(@color_blue, 15%) !important;
     }
 }
 
@@ -18,7 +30,7 @@
     background: @color_lightblue !important;
 
     &:hover {
-        background: @color_lightblue_hover !important;
+        background: darken(@color_lightblue, 15%) !important;
     }
 }
 
@@ -26,7 +38,7 @@
     background: @color_success !important;
 
     &:hover {
-        background: @color_success_hover !important;
+        background: darken(@color_success, 15%) !important;
     }
 }
 
@@ -34,7 +46,7 @@
     background: @color_warning !important;
 
     &:hover {
-        background: @color_warning_hover !important;
+        background: darken(@color_warning, 15%) !important;
     }
 }
 
@@ -42,7 +54,7 @@
     background: @color_important !important;
 
     &:hover {
-        background: @color_important_hover !important;
+        background: darken(@color_important, 15%) !important;
     }
 }
 
@@ -244,49 +256,49 @@
 
     .widget.wred .widget-head {
         background-color: @color_important;
-        border: 1px solid @color_important;
+        border: 1px solid darken(@color_important, 15%);
         color: @color_FFF;
     }
 
     .widget.wlightblue .widget-head {
         background-color: @color_lightblue;
-        border: 1px solid @color_lightblue;
+        border: 1px solid darken(@color_lightblue, 15%);
         color: @color_FFF;
     }
 
     .widget.wblue .widget-head {
         background-color: @color_blue;
-        border: 1px solid @color_blue;
+        border: 1px solid darken(@color_blue, 15%);
         color: @color_FFF;
     }
 
     .widget.wgreen .widget-head {
         background-color: @color_success;
-        border: 1px solid @color_success;
+        border: 1px solid darken(@color_success, 15%);
         color: @color_FFF;
     }
 
     .widget.worange .widget-head {
         background-color: @color_warning;
-        border: 1px solid @color_warning;
+        border: 1px solid darken(@color_warning, 15%);
         color: @color_FFF;
     }
 
     .widget.wviolet .widget-head {
         background-color: @color_violet;
-        border: 1px solid @color_violet;
+        border: 1px solid darken(@color_violet, 15%);
         color: @color_FFF;
     }
 
     .widget.wlime .widget-head {
         background-color: @color_lime;
-        border: 1px solid @color_lime;
+        border: 1px solid darken(@color_lime, 15%);
         color: @color_FFF;
     }
 
     .widget.whotpink .widget-head {
         background-color: @color_hotpink;
-        border: 1px solid @color_hotpink;
+        border: 1px solid darken(@color_hotpink, 15%);
         color: @color_FFF;
     }
 
@@ -299,15 +311,8 @@
         .widget.wlime .widget-head .widget-icons a,
         .widget.whotpink .widget-head .widget-icons a {
             color: @color_FFF;
-        }
 
-            .widget.wred .widget-head .widget-icons a:hover,
-            .widget.wblue .widget-head .widget-icons a:hover,
-            .widget.wlightblue .widget-head .widget-icons a:hover,
-            .widget.worange .widget-head .widget-icons a:hover,
-            .widget.wgreen .widget-head .widget-icons a:hover,
-            .widget.wviolet .widget-head .widget-icons a:hover,
-            .widget.wlime .widget-head .widget-icons a:hover,
-            .widget.whotpink .widget-head .widget-icons a:hover {
+            &:hover {
                 color: @color_EEE;
             }
+        }

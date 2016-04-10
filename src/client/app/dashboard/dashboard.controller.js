@@ -99,8 +99,9 @@
                 console.log('## RESPONSE');
                 console.log(resp);
 
-            }, null, function(process) {
-                console.log('Processing...', process);
+            }, null, function(evt) {
+                console.log('Processing...', evt);
+                vm.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
             });
         }
     }

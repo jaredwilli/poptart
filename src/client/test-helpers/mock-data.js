@@ -26,7 +26,7 @@ var mockData = (function() {
             results: [{
                 id: 1,
                 firstName: 'Jared',
-                lastName: 'Williams',
+                lastName: 'Williams`',
                 age: 33,
                 location: 'Massachusetts'
             }, {

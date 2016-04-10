@@ -28,7 +28,6 @@
 
     /* @ngInject */
     function toastrConfig(toastr) {
-
         toastr.options.timeOut = 4000;
         toastr.options.hideDuration = 500;
         toastr.options.closeButton = true;
@@ -40,7 +39,6 @@
         appErrorPrefix: '[Poptart Error] ',
         appTitle: 'Poptart'
     };
-
 
     core.value('config', config);
     core.config(configure);

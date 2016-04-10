@@ -10,9 +10,9 @@
         //Usage:
         //<div ht-widget-header title="vm.map.title"></div>
         // Creates:
-        // <div ht-widget-header=""
+        // <div ht-widget-header
         //      title="Movie"
-        //      allow-collapse="true" </div>
+        //      allow-collapse="true"></div>
         var directive = {
             scope: {
                 'title': '@',

@@ -66,6 +66,7 @@ input[type="radio"], input[type="checkbox"] {
     font-size: 13px !important;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
+
 .btn.btn-form-md {
     margin: 0 .5em .2em .5em;
     width: 9em;
@@ -81,13 +82,13 @@ body {
     line-height: 23px;
     padding-top: 45px;
     -webkit-font-smoothing: antialiased;
-}
 
-    body .container {
+    .container {
         padding-left: 1.5%;
         padding-right: 1.5%;
         width: 97%;
     }
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: @color_777;
@@ -258,7 +259,8 @@ form {
     display: none;
 }
 
-    .totop a, .totop a:visited {
+    .totop a,
+    .totop a:visited {
         color: @color_FFF;
         text-align: center;
         line-height: 30px;
@@ -814,13 +816,13 @@ form {
 @media (max-width: 767px) {
     body {
         margin: 0 auto;
-    }
 
-        body .container {
+        .container {
             padding-left: 2.5%;
             padding-right: 2.5%;
             width: 95%;
         }
+    }
 
     .content {
         margin-left: -20px;
@@ -1337,15 +1339,14 @@ small {
     padding: 0 4px 0 0;
 }
 
-
 .progress,
 .page-progress-bar {
     margin: 30px 10% !important;
 }
 
 .ngplus-overlay-background {
-    .opacity(0.2);
-    background-color: #808080;
+    .opacity(0.9);
+    background-color: #333;
     position: absolute;
     height: 100%;
     width: 100%;

@@ -10,9 +10,13 @@
     /* @ngInject */
     function ShellController($rootScope, $timeout, config, logger) {
         var vm = this;
+
         vm.busyMessage = 'Please wait ...';
         vm.isBusy = true;
+
         $rootScope.showSplash = true;
+        $rootScope.progress = 0;
+
         vm.navline = {
             title: config.appTitle,
             text: '@jaredwilli',

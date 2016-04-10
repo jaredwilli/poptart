@@ -10,7 +10,7 @@
     /* @ngInject */
     function htImgPerson(config) {
         //Usage:
-        //<img ht-img-person="{{person.imageSource}}"/>
+        //<img ht-img-person="{{ person.imageSource }}"/>
         var basePath = config.imageBasePath;
         var unknownImage = config.unknownPersonImageSource;
         var directive = {
