@@ -5,6 +5,13 @@
         .module('app.dashboard')
         .controller('DashboardController', DashboardController);
 
+    /**
+     * Example docstring
+     * @param  {Object} $delegate
+     * @param  {Object} exceptionHandler
+     * @param  {Object} logger
+     * @return {Function} the decorated $exceptionHandler service
+     */
     DashboardController.$inject = [
         '$q', '$scope', 'Upload', 'dataservice', 'logger'
     ];

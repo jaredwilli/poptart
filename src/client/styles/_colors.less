@@ -1,0 +1,313 @@
+@import '__config.less';
+
+/**
+ * Colors
+ */
+
+/* Button colors */
+
+.btn.btn-primary {
+    background: @color_blue !important;
+
+    &:hover {
+        background: @color_blue_hover !important;
+    }
+}
+
+.btn.btn-info {
+    background: @color_lightblue !important;
+
+    &:hover {
+        background: @color_lightblue_hover !important;
+    }
+}
+
+.btn.btn-success {
+    background: @color_success !important;
+
+    &:hover {
+        background: @color_success_hover !important;
+    }
+}
+
+.btn.btn-warning {
+    background: @color_warning !important;
+
+    &:hover {
+        background: @color_warning_hover !important;
+    }
+}
+
+.btn.btn-danger {
+    background: @color_important !important;
+
+    &:hover {
+        background: @color_important_hover !important;
+    }
+}
+
+
+/* Label colors */
+
+.label.label-success,
+.badge.badge-success {
+    background: @color_success !important;
+}
+
+.label.label-warning,
+.badge.badge-warning {
+    background: @color_warning !important;
+}
+
+.label.label-important,
+.badge.badge-important {
+    background: @color_important !important;
+}
+
+.label.label-info,
+.badge.badge-info {
+    background: @color_lightblue !important;
+}
+
+/* Background colors */
+
+.blightblue {
+    background: @color_lightblue !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.bblue {
+    background: @color_blue !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.bgreen {
+    background: @color_success !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.borange {
+    background: @color_warning !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.bred {
+    background: @color_important !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.bviolet {
+    background: @color_violet !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.blime {
+    background: @color_lime !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+.bhotpink {
+    background: @color_hotpink !important;
+    color: @color_FFF !important;
+    border: 0 !important;
+}
+
+    .blightblue h2, .blightblue h3, .blightblue h3, .blightblue h4, .blightblue h5, .blightblue h6,
+    .bblue h2, .bblue h3, .bblue h3, .bblue h4, .bblue h5, .bblue h6,
+    .bgreen h2, .bgreen h3, .bgreen h3, .bgreen h4, .bgreen h5, .bgreen h6,
+    .borange h2, .borange h3, .borange h3, .borange h4, .borange h5, .borange h6,
+    .bred h2, .bred h3, .bred h3, .bred h4, .bred h5, .bred h6,
+    .bviolet h2, .bviolet h3, .bviolet h3, .bviolet h4, .bviolet h5, .bviolet h6,
+    .blime h2, .blime h3, .blime h3, .blime h4, .blime h5, .blime h6,
+    .bhotpink h2, .bhotpink h3, .bhotpink h3, .bhotpink h4, .bhotpink h5, .bhotpink h6 {
+        color: @color_FFF !important;
+    }
+
+    .blightblue a,
+    .bblue a,
+    .bgreen a,
+    .bred a,
+    .borange a,
+    .bviolet a,
+    .blime a,
+    .bhotpink a {
+        color: @color_EEE !important;
+
+        &:hover {
+            color: @color_DDD !important;
+        }
+    }
+
+
+/* Text colors */
+
+.lightblue {
+    color: @color_lightblue !important;
+}
+
+.blue {
+    color: @color_blue !important;
+}
+
+.green {
+    color: @color_success !important;
+}
+
+.orange {
+    color: @color_warning !important;
+}
+
+.red {
+    color: @color_important !important;
+}
+
+.violet {
+    color: @color_violet !important;
+}
+
+.lime {
+    color: @color_lime !important;
+}
+
+.hotpink {
+    color: @color_hotpink !important;
+}
+
+
+    /* Sidebar colors */
+
+    .sidebar .navi > li.nlightblue > a:hover,
+    .sidebar .navi > li.open.nlightblue > a,
+    .sidebar .navi > li.current.nlightblue > a {
+        .transition(background 0.5s ease);
+        background: @color_lightblue !important;
+    }
+
+    .sidebar .navi > li.nblue > a:hover,
+    .sidebar .navi > li.open.nblue > a,
+    .sidebar .navi > li.current.nblue > a {
+        .transition(background 0.5s ease);
+        background: @color_blue !important;
+    }
+
+    .sidebar .navi > li.ngreen > a:hover,
+    .sidebar .navi > li.open.ngreen > a,
+    .sidebar .navi > li.current.ngreen > a {
+        .transition(background 0.5s ease);
+        background: @color_success !important;
+    }
+
+    .sidebar .navi > li.norange > a:hover,
+    .sidebar .navi > li.open.norange > a,
+    .sidebar .navi > li.current.norange > a {
+        .transition(background 0.5s ease);
+        background: @color_warning !important;
+    }
+
+    .sidebar .navi > li.nred > a:hover,
+    .sidebar .navi > li.open.nred > a,
+    .sidebar .navi > li.current.nred > a {
+        .transition(background 0.5s ease);
+        background: @color_important !important;
+    }
+
+    .sidebar .navi > li.nviolet > a:hover,
+    .sidebar .navi > li.open.nviolet > a,
+    .sidebar .navi > li.current.nviolet > a {
+        .transition(background 0.5s ease);
+        background: @color_violet !important;
+    }
+
+    .sidebar .navi > li.nlime > a:hover,
+    .sidebar .navi > li.open.nlime > a,
+    .sidebar .navi > li.current.nlime > a {
+        .transition(background 0.5s ease);
+        background: @color_lime !important;
+    }
+
+    .sidebar .navi > li.nhotpink > a:hover,
+    .sidebar .navi > li.open.nhotpink > a,
+    .sidebar .navi > li.current.nhotpink > a {
+        .transition(background 0.5s ease);
+        background: @color_hotpink !important;
+    }
+
+
+    /* Widget colors */
+
+    .widget.wred .widget-head {
+        background-color: @color_important;
+        border: 1px solid @color_important;
+        color: @color_FFF;
+    }
+
+    .widget.wlightblue .widget-head {
+        background-color: @color_lightblue;
+        border: 1px solid @color_lightblue;
+        color: @color_FFF;
+    }
+
+    .widget.wblue .widget-head {
+        background-color: @color_blue;
+        border: 1px solid @color_blue;
+        color: @color_FFF;
+    }
+
+    .widget.wgreen .widget-head {
+        background-color: @color_success;
+        border: 1px solid @color_success;
+        color: @color_FFF;
+    }
+
+    .widget.worange .widget-head {
+        background-color: @color_warning;
+        border: 1px solid @color_warning;
+        color: @color_FFF;
+    }
+
+    .widget.wviolet .widget-head {
+        background-color: @color_violet;
+        border: 1px solid @color_violet;
+        color: @color_FFF;
+    }
+
+    .widget.wlime .widget-head {
+        background-color: @color_lime;
+        border: 1px solid @color_lime;
+        color: @color_FFF;
+    }
+
+    .widget.whotpink .widget-head {
+        background-color: @color_hotpink;
+        border: 1px solid @color_hotpink;
+        color: @color_FFF;
+    }
+
+        .widget.wred .widget-head .widget-icons a,
+        .widget.wblue .widget-head .widget-icons a,
+        .widget.wlightblue .widget-head .widget-icons a,
+        .widget.worange .widget-head .widget-icons a,
+        .widget.wgreen .widget-head .widget-icons a,
+        .widget.wviolet .widget-head .widget-icons a,
+        .widget.wlime .widget-head .widget-icons a,
+        .widget.whotpink .widget-head .widget-icons a {
+            color: @color_FFF;
+        }
+
+            .widget.wred .widget-head .widget-icons a:hover,
+            .widget.wblue .widget-head .widget-icons a:hover,
+            .widget.wlightblue .widget-head .widget-icons a:hover,
+            .widget.worange .widget-head .widget-icons a:hover,
+            .widget.wgreen .widget-head .widget-icons a:hover,
+            .widget.wviolet .widget-head .widget-icons a:hover,
+            .widget.wlime .widget-head .widget-icons a:hover,
+            .widget.whotpink .widget-head .widget-icons a:hover {
+                color: @color_EEE;
+            }

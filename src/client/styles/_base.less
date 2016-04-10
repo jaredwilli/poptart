@@ -1,4 +1,5 @@
-@import '_config';
+@import '__config';
+@import '_colors';
 
 
 /**
@@ -195,160 +196,7 @@ a.btn {
         font-size: 12px;
     }
 
-/* Button colors */
 
-.btn.btn-primary {
-    background: @color_blue !important;
-}
-
-    .btn.btn-primary:hover {
-        background: @color_blue_hover !important;
-    }
-
-.btn.btn-info {
-    background: @color_lightblue !important;
-}
-
-    .btn.btn-info:hover {
-        background: @color_lightblue_hover !important;
-    }
-
-.btn.btn-success {
-    background: @color_success !important;
-}
-
-    .btn.btn-success:hover {
-        background: @color_success_hover !important;
-    }
-
-.btn.btn-warning {
-    background: @color_warning !important;
-}
-
-    .btn.btn-warning:hover {
-        background: @color_warning_hover !important;
-    }
-
-.btn.btn-danger {
-    background: @color_important !important;
-}
-
-    .btn.btn-danger:hover {
-        background: @color_important_hover !important;
-    }
-
-/* Label colors */
-
-.label.label-success,
-.badge.badge-success {
-    background: @color_success !important;
-}
-
-.label.label-warning,
-.badge.badge-warning {
-    background: @color_warning !important;
-}
-
-.label.label-important,
-.badge.badge-important {
-    background: @color_important !important;
-}
-
-.label.label-info,
-.badge.badge-info {
-    background: @color_lightblue !important;
-}
-
-/* Background colors */
-
-.blightblue {
-    background: @color_lightblue !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-.bblue {
-    background: @color_blue !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-.bgreen {
-    background: @color_success !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-.borange {
-    background: @color_warning !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-.bred {
-    background: @color_important !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-.bviolet {
-    background: @color_violet !important;
-    color: @color_FFF !important;
-    border: 0 !important;
-}
-
-    .blightblue h2, .blightblue h3, .blightblue h3, .blightblue h4, .blightblue h5, .blightblue h6,
-    .bblue h2, .bblue h3, .bblue h3, .bblue h4, .bblue h5, .bblue h6,
-    .bgreen h2, .bgreen h3, .bgreen h3, .bgreen h4, .bgreen h5, .bgreen h6,
-    .bred h2, .bred h3, .bred h3, .bred h4, .bred h5, .bred h6,
-    .bviolet h2, .bviolet h3, .bviolet h3, .bviolet h4, .bviolet h5, .bviolet h6,
-    .borange h2, .borange h3, .borange h3, .borange h4, .borange h5, .borange h6 {
-        color: @color_FFF !important;
-    }
-
-    .blightblue a,
-    .bblue a,
-    .bgreen a,
-    .bred a,
-    .borange a,
-    .bviolet a {
-        color: @color_EEE !important;
-    }
-
-        .blightblue a:hover,
-        .bblue a:hover,
-        .bgreen a:hover,
-        .bred a:hover,
-        .borange a:hover,
-        .bviolet a:hover {
-            color: @color_DDD !important;
-        }
-
-/* Text colors */
-
-.lightblue {
-    color: @color_lightblue !important;
-}
-
-.blue {
-    color: @color_blue !important;
-}
-
-.green {
-    color: @color_success !important;
-}
-
-.orange {
-    color: @color_warning !important;
-}
-
-.red {
-    color: @color_important !important;
-}
-
-.violet {
-    color: @color_violet !important;
-}
 
 
 /* Modal */
@@ -645,50 +493,6 @@ form {
         border-bottom: 1px solid @color_222;
     }
 
-    /* Sidebar colors */
-
-    .sidebar .navi > li.nlightblue > a:hover,
-    .sidebar .navi > li.open.nlightblue > a,
-    .sidebar .navi > li.current.nlightblue > a {
-        .transition(background 0.5s ease);
-        background: @color_lightblue !important;
-    }
-
-    .sidebar .navi > li.nblue > a:hover,
-    .sidebar .navi > li.open.nblue > a,
-    .sidebar .navi > li.current.nblue > a {
-        .transition(background 0.5s ease);
-        background: @color_blue !important;
-    }
-
-    .sidebar .navi > li.ngreen > a:hover,
-    .sidebar .navi > li.open.ngreen > a,
-    .sidebar .navi > li.current.ngreen > a {
-        .transition(background 0.5s ease);
-        background: @color_success !important;
-    }
-
-    .sidebar .navi > li.norange > a:hover,
-    .sidebar .navi > li.open.norange > a,
-    .sidebar .navi > li.current.norange > a {
-        .transition(background 0.5s ease);
-        background: @color_warning !important;
-    }
-
-    .sidebar .navi > li.nred > a:hover,
-    .sidebar .navi > li.open.nred > a,
-    .sidebar .navi > li.current.nred > a {
-        .transition(background 0.5s ease);
-        background: @color_important !important;
-    }
-
-    .sidebar .navi > li.nviolet > a:hover,
-    .sidebar .navi > li.open.nviolet > a,
-    .sidebar .navi > li.current.nviolet > a {
-        .transition(background 0.5s ease);
-        background: @color_violet !important;
-    }
-
 /* Sidebar dropdown */
 
     .sidebar .sidebar-dropdown* {
@@ -776,45 +580,49 @@ form {
     margin-right: 0;
     width: auto;
     // min-height: 900px;
-}
 
-    .mainbar .container {
+    .container {
         padding: 0 !important;
         width: 100%;
     }
+}
 
-/* Pagination*/
+/* Pagination */
 
 .pagination {
     margin: 10px 0 5px 0;
+
+    ul > li,
+    ul > li {
+        & > a,
+        & > span {
+            background-color: @color_FFF;
+            border: 1px solid @color_CCC;
+            color: @color_666;
+            margin-right: 3px;
+            padding: 3px 8px;
+        }
+
+        & > a:hover {
+            background: #fafafa;
+            color: @color_333;
+        }
+    }
 }
 
-    .pagination ul > li > a,
-    .pagination ul > li > span {
-        background-color: @color_FFF;
-        border: 1px solid @color_CCC;
-        color: @color_666;
-        margin-right: 3px;
-        padding: 3px 8px;
-    }
-
-        .pagination ul > li > a:hover {
-            color: @color_333;
-            background: #fafafa;
-        }
 
 /* Page head */
 
 .mainbar .page-head {
-    padding: 15px 20px;
     border-bottom: 1px solid @color_FFF;
+    padding: 15px 20px;
 }
 
 .mainbar .page-meta {
     font-size: 13px;
     line-height: 15px;
-    margin-left: 2px;
     display: block;
+    margin-left: 2px;
 }
 
 
@@ -828,16 +636,16 @@ form {
 /* Widget */
 
 .widget {
+    background: @color_FFF;
     margin-top: 10px;
     margin-bottom: 20px;
-    background: @color_FFF;
 }
 
     .widget hr {
-        margin: 4px 0;
-        padding: 4px 0;
         border-top: 0;
         border-bottom: 1px solid @color_DDD;
+        margin: 4px 0;
+        padding: 4px 0;
     }
 
     .widget .table {
@@ -906,62 +714,6 @@ form {
         font-size: 13px;
         padding: 8px 15px;
     }
-
-    /* Widget colors */
-
-    .widget.wred .widget-head {
-        background-color: @color_important;
-        border: 1px solid @color_important;
-        color: @color_FFF;
-    }
-
-    .widget.wlightblue .widget-head {
-        background-color: @color_lightblue;
-        border: 1px solid @color_lightblue;
-        color: @color_FFF;
-    }
-
-    .widget.wblue .widget-head {
-        background-color: @color_blue;
-        border: 1px solid @color_blue;
-        color: @color_FFF;
-    }
-
-    .widget.wgreen .widget-head {
-        background-color: @color_success;
-        border: 1px solid @color_success;
-        color: @color_FFF;
-    }
-
-    .widget.worange .widget-head {
-        background-color: @color_warning;
-        border: 1px solid @color_warning;
-        color: @color_FFF;
-    }
-
-    .widget.wviolet .widget-head {
-        background-color: @color_violet;
-        border: 1px solid @color_violet;
-        color: @color_FFF;
-    }
-
-        .widget.wred .widget-head .widget-icons a,
-        .widget.wblue .widget-head .widget-icons a,
-        .widget.wlightblue .widget-head .widget-icons a,
-        .widget.worange .widget-head .widget-icons a,
-        .widget.wgreen .widget-head .widget-icons a,
-        .widget.wviolet .widget-head .widget-icons a {
-            color: @color_FFF;
-        }
-
-            .widget.wred .widget-head .widget-icons a:hover,
-            .widget.wblue .widget-head .widget-icons a:hover,
-            .widget.wlightblue .widget-head .widget-icons a:hover,
-            .widget.worange .widget-head .widget-icons a:hover,
-            .widget.wgreen .widget-head .widget-icons a:hover,
-            .widget.wviolet .widget-head .widget-icons a:hover {
-                color: @color_EEE;
-            }
 
     /* Widget white extras */
 
@@ -1090,7 +842,7 @@ form {
     }
 
     .nav-collapse .dropdown-big .dropdown-menu {
-        color: #bbb !important;
+        color: @color_BBB !important;
     }
 
         .nav-collapse .dropdown-big .dropdown-menu a {
@@ -1181,7 +933,7 @@ form {
     }
 
     .nav-collapse .dropdown-big .dropdown-menu {
-        color: #bbb !important;
+        color: @color_BBB !important;
     }
 
         .nav-collapse .dropdown-big .dropdown-menu a {
@@ -1299,7 +1051,7 @@ body {
 }
 
 .navbar-inverse {
-    background-color: @color_333;
+    background-color: @color_navbar;
 }
 
 .sidebar-widget form {
@@ -1319,7 +1071,7 @@ body {
     }
 
     .sidebar .navi li ul li a:disabled {
-        color: #999;
+        color: @color_999;
     }
 
 .navbar-inverse .btn-navbar {
@@ -1537,6 +1289,7 @@ small {
 .page-splash {
     .transition(opacity 0.3s linear);
     .backface-visibility(hidden);
+    .opacity(0.9);
     background-color: rgba(51, 51, 51, 0.4);
     pointer-events: auto;
     position: fixed !important;
@@ -1544,7 +1297,6 @@ small {
     left: 0;
     width: 100%;
     height: 100%;
-    .opacity(0.9);
     z-index: 99999 !important;
 }
 
@@ -1592,6 +1344,7 @@ small {
 }
 
 .ngplus-overlay-background {
+    .opacity(0.2);
     background-color: #808080;
     position: absolute;
     height: 100%;
@@ -1599,7 +1352,6 @@ small {
     top: 0;
     left: 0;
     padding-left: 100px;
-    .opacity(0.2);
     z-index: 10000;
 }
 
@@ -1694,24 +1446,24 @@ a {
 
 .shuffle-animation.ng-enter {
     .transition(ease-out all 0.3s 0.4s);
-    left: 2em;
     .opacity(0);
+    left: 2em;
 }
 
     .shuffle-animation.ng-enter.ng-enter-active {
-        left: 0;
         .opacity(1);
+        left: 0;
     }
 
 .shuffle-animation.ng-leave {
     .transition(0.3s ease-out all);
-    left: 0;
     .opacity(1);
+    left: 0;
 }
 
     .shuffle-animation.ng-leave.ng-leave-active {
-        left: 2em;
         .opacity(0);
+        left: 2em;
     }
 /*#endregion*/
 
