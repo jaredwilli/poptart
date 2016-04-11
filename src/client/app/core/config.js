@@ -3,31 +3,31 @@
 
     var core = angular.module('app.core');
 
-    /**
-     * http://codeseven.github.io/toastr/
-    toastr.options = {
-      "closeButton": true,
-      "debug": true,
-      "newestOnTop": true,
-      "progressBar": true,
-      "positionClass": "toast-bottom-right",
-      "preventDuplicates": true,
-      "showDuration": "300",
-      "hideDuration": "1000",
-      "timeOut": 0,
-      "extendedTimeOut": 0,
-      "showEasing": "swing",
-      "hideEasing": "linear",
-      "showMethod": "fadeIn",
-      "hideMethod": "fadeOut",
-      "tapToDismiss": false
-    }
-     */
     core.config(toastrConfig);
     toastrConfig.$inject = ['toastr'];
 
     /* @ngInject */
     function toastrConfig(toastr) {
+        /**
+         * http://codeseven.github.io/toastr/
+         toastr.options = {
+          "closeButton": true,
+          "debug": true,
+          "newestOnTop": true,
+          "progressBar": true,
+          "positionClass": "toast-bottom-right",
+          "preventDuplicates": true,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": 0,
+          "extendedTimeOut": 0,
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut",
+          "tapToDismiss": false
+         }
+         */
         toastr.options.timeOut = 4000;
         toastr.options.hideDuration = 500;
         toastr.options.closeButton = true;
@@ -44,14 +44,12 @@
     core.config(configure);
 
     configure.$inject = [
-        '$logProvider', 'routerHelperProvider',
-        'exceptionHandlerProvider'
+        '$logProvider', 'routerHelperProvider', 'exceptionHandlerProvider'
     ];
 
     /* @ngInject */
     function configure(
-        $logProvider, routerHelperProvider,
-        exceptionHandlerProvider
+        $logProvider, routerHelperProvider, exceptionHandlerProvider
     ) {
         if ($logProvider.debugEnabled) {
             $logProvider.debugEnabled(true);

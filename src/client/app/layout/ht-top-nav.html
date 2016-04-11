@@ -15,8 +15,19 @@
     </div>
 
     <div class="navbar-collapse collapse" uib-collapse="isCollapsed">
-        <div class="pull-right navbar-logo">
-            <ul class="nav navbar-nav pull-right">
+        <div class="pull-right pull-right navbar-logo">
+            <button type="button" class="btn btn-primary dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Account
+                <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+
+            <!-- <ul class="nav navbar-nav pull-right">
                 <li>
                     <a ng-href="{{ vm.navline.link }}" target="_blank">
                         {{ vm.navline.text }}
@@ -32,7 +43,7 @@
                         <img src="images/gulp-tiny.png" />
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </nav>

@@ -3,6 +3,7 @@
 
     angular
         .module('app.core', [
+            'firebase',
             'ngAnimate',
             'ngSanitize',
             'blocks.exception',
@@ -10,6 +11,6 @@
             'blocks.router',
             'ui.router',
             'ngplus',
-            'ngFileUpload',
+            'ngFileUpload'
         ]);
 })();

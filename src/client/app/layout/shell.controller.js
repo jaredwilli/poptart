@@ -5,7 +5,9 @@
         .module('app.layout')
         .controller('ShellController', ShellController);
 
-    ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger'];
+    ShellController.$inject = [
+        '$rootScope', '$timeout', 'config', 'logger'
+    ];
 
     /* @ngInject */
     function ShellController($rootScope, $timeout, config, logger) {
@@ -19,8 +21,8 @@
 
         vm.navline = {
             title: config.appTitle,
-            text: '@jaredwilli',
-            link: 'http://twitter.com/jaredwilli'
+            text: 'Login',
+            link: '/login'
         };
 
         activate();
