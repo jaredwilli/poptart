@@ -1,5 +1,7 @@
 # Poptart - a side project...
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaredwilli/poptart.svg)](https://greenkeeper.io/)
+
 **Angular and Node.js**
 
 
